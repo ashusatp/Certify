@@ -66,7 +66,7 @@ const ValidCertificatePage = ({ url, valid, certificateKey }) => {
   // Document information for DocViewer
   const docs = [
     {
-      uri: `http://localhost:8888/api/pdf-proxy?url=${url}`,
+      uri: `${process.env.REACT_APP_API_URL}/api/pdf-proxy?url=${url}`,
       fileType: "pdf",
       fileName: certificateKey,
     },
