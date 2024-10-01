@@ -7,6 +7,10 @@ async function jwtVerification(req, res, next) {
   // Ensure that req.cookies exists and check if accessToken is present
   const accessToken = req.cookies?.accessToken;
   
+  // Deployemnt Debug
+  console.log("access token: ",accessToken)
+  console.log("cookies: ",req.cookies)
+
   if (!accessToken) {
     return next(CustomErrorHandler.unAuthorized("Access token missing"));
   }
