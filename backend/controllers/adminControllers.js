@@ -60,14 +60,16 @@ const adminControllers = {
 
       res.cookie("accessToken", accessToken, {
         maxAge: 1000 * 60 * 60 * 24 * 30, //30 days
+        httpOnly: true,
         sameSite: "none",
-        secure: true,
+        secure: false,
       });
 
       res.cookie("refreshToken", refreshToken, {
         maxAge: 1000 * 60 * 60 * 24 * 30, //30 days
+        httpOnly: true,
         sameSite: "none",
-        secure: true,
+        secure: false,
       });
 
       res.status(200).json({
@@ -115,14 +117,16 @@ const adminControllers = {
 
       res.cookie("accessToken", accessToken, {
         maxAge: 1000 * 60 * 60 * 24 * 30, //30 days
+        httpOnly: true,
         sameSite: "none",
-        secure: true,
+        secure: false,
       });
 
       res.cookie("refreshToken", refreshToken, {
         maxAge: 1000 * 60 * 60 * 24 * 30, //30 days
+        httpOnly: true,
         sameSite: "none",
-        secure: true,
+        secure: false,
       });
 
       res.status(200).json({
@@ -201,13 +205,15 @@ const adminControllers = {
       res.cookie("accessToken", accessToken, {
         maxAge: 1000 * 60 * 60 * 24 * 30, //30 days
         sameSite: "none",
-        secure: true,
+        secure: false,
+        httpOnly: true,
       });
 
       res.cookie("refreshToken", refreshToken, {
         maxAge: 1000 * 60 * 60 * 24 * 30, //30 days
         sameSite: "none",
-        secure: true,
+        secure: false,
+        httpOnly: true,
       });
 
       res.status(200).json({
