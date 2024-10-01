@@ -41,6 +41,10 @@ app.get("/api/pdf-proxy", async (req, res) => {
   }
 });
 
+app.get("/api/ping", async(req,res) => {
+  res.status(200).json({success : true, message: "Endpoint Health Check"})
+})
+
 app.use("/admin", adminRoutes);
 app.use("/user", userRoutes);
 

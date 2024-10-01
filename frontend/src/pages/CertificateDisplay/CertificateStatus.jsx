@@ -16,7 +16,6 @@ const CertificateStatus = () => {
   const fetchUrlIfValid = async () => {
     try {
       const { data } = await fetchUrl(vrCode);
-      console.log(data); // Check if data.keyName exists here
 
       if (data.success) {
         if (data.valid) {
